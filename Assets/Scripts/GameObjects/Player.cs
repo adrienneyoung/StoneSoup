@@ -149,7 +149,7 @@ public class Player : Tile {
 		}
 
 		// If we press space, we're attempting to either pickup, drop, or switch items.
-		if (Input.GetMouseButtonDown(1)) {
+		if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Space)) {
 			bool pickedUpOrDroppedItem = false;
 
 			// First, drop the item we're holding

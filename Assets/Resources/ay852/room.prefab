@@ -56,7 +56,7 @@ MonoBehaviour:
   localTilePrefabs: []
   roomGridX: 0
   roomGridY: 0
-  corgiPrefab: {fileID: 1496507104794826, guid: 8977637b376e8a54886466aec4db2e79,
+  corgiPrefab: {fileID: 1794648351648206, guid: b25368d5732f7054ca122292818656c8,
     type: 2}
-  minCorgiBuns: 2
-  maxCorgiBuns: 10
+  minCorgis: 1
+  maxCorgis: 2

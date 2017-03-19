@@ -6,7 +6,7 @@ public class ay852Room : Room {
 
     public GameObject corgiPrefab;
 
-    public int minCorgis = 1, maxCorgis = 2;
+    public int minCorgis = 0, maxCorgis = 1;
 
     //we can access the wall prefabs by passing in levelgenerator
     //something about Dir[]?

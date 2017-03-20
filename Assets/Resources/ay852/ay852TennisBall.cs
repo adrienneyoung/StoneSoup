@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ay852Bouncer : Tile {
+public class ay852TennisBall : Tile {
 
     //if a creature collides with us, bounce it away
 
@@ -22,7 +22,4 @@ public class ay852Bouncer : Tile {
             otherTile.addForce(dirToBounce * bounceForce);
         }
     }
-
-    //add this script to ur prefab and remove the tile script. keep the box collider 2d
-    //can change health in inspector
 }

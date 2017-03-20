@@ -59,7 +59,18 @@ MonoBehaviour:
   corgiPrefab: {fileID: 1524127126926286, guid: a5c8b6958f058114a83e0dab7f07ebac,
     type: 2}
   bonePrefab: {fileID: 1093713068471696, guid: 1a0440ecdb7578940a965a8d9ad77dac, type: 2}
+  kyubeyPrefab: {fileID: 1050110147845812, guid: aabca1a54c1735140b4ae6a2d15abdf1,
+    type: 2}
+  ballPrefab: {fileID: 1415150498455310, guid: c489754cdd428164eb293e15fd72f1a8, type: 2}
+  spikesPrefab: {fileID: 1916293214939096, guid: d63cc4cfab3c4cf4aaec006bfe48a83f,
+    type: 2}
   minCorgis: 1
   maxCorgis: 2
   minBones: 0
   maxBones: 2
+  minKyubey: 1
+  maxKyubey: 3
+  minBall: 2
+  maxBall: 5
+  minSpikes: 4
+  maxSpikes: 8

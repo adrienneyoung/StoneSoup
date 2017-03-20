@@ -9,47 +9,47 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1093713068471696}
+  m_RootGameObject: {fileID: 1415150498455310}
   m_IsPrefabParent: 1
---- !u!1 &1093713068471696
+--- !u!1 &1415150498455310
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4203402037025334}
-  - component: {fileID: 212411739382893840}
-  - component: {fileID: 114389897586855892}
-  - component: {fileID: 61691799094616926}
-  - component: {fileID: 50077629301948808}
+  - component: {fileID: 4314423175911694}
+  - component: {fileID: 212108251090001238}
+  - component: {fileID: 114429625932693628}
+  - component: {fileID: 50207573836723814}
+  - component: {fileID: 58502693418767044}
   m_Layer: 0
-  m_Name: bone_tile
+  m_Name: ball_tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4203402037025334
+--- !u!4 &4314423175911694
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1093713068471696}
+  m_GameObject: {fileID: 1415150498455310}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.5, y: -17.3, z: 0}
+  m_LocalPosition: {x: -11, y: -27.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50077629301948808
+--- !u!50 &50207573836723814
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1093713068471696}
+  m_GameObject: {fileID: 1415150498455310}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -58,17 +58,17 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8bf99e611298d4c74bc559b22099de99, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &61691799094616926
-BoxCollider2D:
+--- !u!58 &58502693418767044
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1093713068471696}
+  m_GameObject: {fileID: 1415150498455310}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -76,36 +76,35 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.9500232, y: 0.4280603}
---- !u!114 &114389897586855892
+  m_Radius: 1.5931416
+--- !u!114 &114429625932693628
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1093713068471696}
+  m_GameObject: {fileID: 1415150498455310}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99362a11a9303eb4fbd1af355c6f9340, type: 3}
+  m_Script: {fileID: 11500000, guid: 5dae6eb82e5e1fa41886d7994c755cfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tags: 258
-  tileName: Dog Bone
+  tags: 66
+  tileName: Tennis Ball
   health: 1
-  deathEffect: {fileID: 0}
-  deathSFX: {fileID: 8300000, guid: c59d79030876cf84aada51d8f48d7b7d, type: 3}
+  deathEffect: {fileID: 1267897626114914, guid: a783d8491895847699704a8bc85c5466,
+    type: 2}
+  deathSFX: {fileID: 8300000, guid: 2940c3ebcb86849aa84a3ff4b1bf2a46, type: 3}
   heldOffset: {x: 0.2, y: -0.1}
   heldAngle: 0
   tileWereHolding: {fileID: 0}
   aimDirection: {x: 0, y: 0}
-  chewSound: {fileID: 8300000, guid: 057f717aa4dd4e6419f38a8aabf497ad, type: 3}
-  poofSound: {fileID: 0}
-  afterEatingTime: 0.2
---- !u!212 &212411739382893840
+  bounceForce: 2000
+--- !u!212 &212108251090001238
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1093713068471696}
+  m_GameObject: {fileID: 1415150498455310}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -131,7 +130,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c17ee13031b9e1140b5fb8494769ec22, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 506ef8770ff823a42b298feae3c02b57, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

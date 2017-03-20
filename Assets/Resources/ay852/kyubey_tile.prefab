@@ -9,53 +9,54 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1093713068471696}
+  m_RootGameObject: {fileID: 1050110147845812}
   m_IsPrefabParent: 1
---- !u!1 &1093713068471696
+--- !u!1 &1050110147845812
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4203402037025334}
-  - component: {fileID: 212411739382893840}
-  - component: {fileID: 114389897586855892}
-  - component: {fileID: 61691799094616926}
-  - component: {fileID: 50077629301948808}
+  - component: {fileID: 4663923633416454}
+  - component: {fileID: 212835733220392786}
+  - component: {fileID: 95495475599342424}
+  - component: {fileID: 50279311535781004}
+  - component: {fileID: 114421561008859688}
+  - component: {fileID: 68038942905439258}
   m_Layer: 0
-  m_Name: bone_tile
+  m_Name: kyubey_tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4203402037025334
+--- !u!4 &4663923633416454
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1093713068471696}
+  m_GameObject: {fileID: 1050110147845812}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.5, y: -17.3, z: 0}
+  m_LocalPosition: {x: -18.4, y: -28.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50077629301948808
+--- !u!50 &50279311535781004
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1093713068471696}
+  m_GameObject: {fileID: 1050110147845812}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
+  m_Mass: 4
+  m_LinearDrag: 2
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -63,49 +64,82 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &61691799094616926
-BoxCollider2D:
+--- !u!68 &68038942905439258
+EdgeCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1093713068471696}
+  m_GameObject: {fileID: 1050110147845812}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 0.9500232, y: 0.4280603}
---- !u!114 &114389897586855892
+  m_Points:
+  - {x: 0.50375557, y: -0.42677116}
+  - {x: 0.1941948, y: -0.4279251}
+  - {x: 0.08309746, y: -0.16811371}
+  - {x: -0.09682655, y: -0.35411263}
+  - {x: -0.6741543, y: -0.47900772}
+  - {x: -1.0903339, y: -0.26589394}
+  - {x: -1.0638485, y: -0.016860962}
+  - {x: -0.85513496, y: 0.11008072}
+  - {x: -0.12462044, y: 0.03532219}
+  - {x: 0.36911964, y: 0.54441833}
+  - {x: 0.63336945, y: 0.42649078}
+  - {x: 0.8481083, y: 0.502964}
+  - {x: 1.1724396, y: -0.05524254}
+  - {x: 1.0527458, y: -0.105155945}
+  - {x: 0.75884056, y: 0.059850693}
+  - {x: 0.5705128, y: -0.0027542114}
+  - {x: 0.5009365, y: -0.43566132}
+--- !u!95 &95495475599342424
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1050110147845812}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 884a29d301440944b85564cf834ceec8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114421561008859688
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1093713068471696}
+  m_GameObject: {fileID: 1050110147845812}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99362a11a9303eb4fbd1af355c6f9340, type: 3}
+  m_Script: {fileID: 11500000, guid: fed208b16664c154282c6bd04d11393f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tags: 258
-  tileName: Dog Bone
-  health: 1
-  deathEffect: {fileID: 0}
-  deathSFX: {fileID: 8300000, guid: c59d79030876cf84aada51d8f48d7b7d, type: 3}
+  tags: 20
+  tileName: Evil in the form of a cat
+  health: 5
+  deathEffect: {fileID: 1028137201516130, guid: c6956d67d496541a48fe508b48f70f4b,
+    type: 2}
+  deathSFX: {fileID: 8300000, guid: 409fa4ba0ecc74840a0bb7c5c73aa5c0, type: 3}
   heldOffset: {x: 0.2, y: -0.1}
   heldAngle: 0
   tileWereHolding: {fileID: 0}
   aimDirection: {x: 0, y: 0}
-  chewSound: {fileID: 8300000, guid: 057f717aa4dd4e6419f38a8aabf497ad, type: 3}
-  poofSound: {fileID: 0}
-  afterEatingTime: 0.2
---- !u!212 &212411739382893840
+  moveSpeed: 10
+  moveAcceleration: 100
+--- !u!212 &212835733220392786
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1093713068471696}
+  m_GameObject: {fileID: 1050110147845812}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -131,7 +165,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c17ee13031b9e1140b5fb8494769ec22, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b836124538ec6204fa7f9ffb9ff1b1da, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

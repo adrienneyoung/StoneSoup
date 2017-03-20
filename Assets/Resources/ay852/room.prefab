@@ -58,5 +58,8 @@ MonoBehaviour:
   roomGridY: 0
   corgiPrefab: {fileID: 1524127126926286, guid: a5c8b6958f058114a83e0dab7f07ebac,
     type: 2}
+  bonePrefab: {fileID: 1093713068471696, guid: 1a0440ecdb7578940a965a8d9ad77dac, type: 2}
   minCorgis: 1
   maxCorgis: 2
+  minBones: 0
+  maxBones: 2

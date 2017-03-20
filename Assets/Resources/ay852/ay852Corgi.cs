@@ -17,7 +17,7 @@ public class ay852Corgi : Tile {
 
         if (otherTile) 
         {
-            if(otherTile.hasTag(TileTags.Weapon)) //corgi can be interacted with if it picked up food
+            if(otherTile.hasTag(TileTags.Consumable)) //corgi can be interacted with if it picked up food
             {
                 ateFood = true;
                 //addTag(TileTags.CanBeHeld); //how to make play ride corgi?
@@ -25,18 +25,24 @@ public class ay852Corgi : Tile {
                 //override pickUp()
             }
 
-            if (otherTile.hasTag(TileTags.Player))
+            else if (otherTile.hasTag(TileTags.Player))
             {
                 if (!ateFood) //bouncing the player away if the corgi didn't get food
                 {
                     //make sure the position is vector2 by casting it
                     Vector2 dirToBounce = ((Vector2)(otherTile.transform.position - transform.position)).normalized;
                     otherTile.addForce(dirToBounce * bounceForce);
+                    //otherTile.sprite
                 }
             }
 
             //bark bark
             AudioManager.playAudio(barkSound);
         }
+    }
+
+    void FixedUpdate()
+    {
+        _sprite.flipX = true;
     }
 }

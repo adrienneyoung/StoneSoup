@@ -1322,44 +1322,54 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4314423175911694, guid: c489754cdd428164eb293e15fd72f1a8, type: 2}
+    - target: {fileID: 4077544733163388, guid: 36e917c9e32da3b4a96929fc156a7592, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -11
+      value: -16.69
       objectReference: {fileID: 0}
-    - target: {fileID: 4314423175911694, guid: c489754cdd428164eb293e15fd72f1a8, type: 2}
+    - target: {fileID: 4077544733163388, guid: 36e917c9e32da3b4a96929fc156a7592, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -27.7
+      value: -28.29
       objectReference: {fileID: 0}
-    - target: {fileID: 4314423175911694, guid: c489754cdd428164eb293e15fd72f1a8, type: 2}
+    - target: {fileID: 4077544733163388, guid: 36e917c9e32da3b4a96929fc156a7592, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4314423175911694, guid: c489754cdd428164eb293e15fd72f1a8, type: 2}
+    - target: {fileID: 4077544733163388, guid: 36e917c9e32da3b4a96929fc156a7592, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4314423175911694, guid: c489754cdd428164eb293e15fd72f1a8, type: 2}
+    - target: {fileID: 4077544733163388, guid: 36e917c9e32da3b4a96929fc156a7592, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4314423175911694, guid: c489754cdd428164eb293e15fd72f1a8, type: 2}
+    - target: {fileID: 4077544733163388, guid: 36e917c9e32da3b4a96929fc156a7592, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4314423175911694, guid: c489754cdd428164eb293e15fd72f1a8, type: 2}
+    - target: {fileID: 4077544733163388, guid: 36e917c9e32da3b4a96929fc156a7592, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4314423175911694, guid: c489754cdd428164eb293e15fd72f1a8, type: 2}
+    - target: {fileID: 4077544733163388, guid: 36e917c9e32da3b4a96929fc156a7592, type: 2}
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 1415150498455310, guid: c489754cdd428164eb293e15fd72f1a8, type: 2}
+    - target: {fileID: 1426188302810434, guid: 36e917c9e32da3b4a96929fc156a7592, type: 2}
       propertyPath: m_Name
       value: tennis ball
       objectReference: {fileID: 0}
+    - target: {fileID: 114669105818811694, guid: 36e917c9e32da3b4a96929fc156a7592,
+        type: 2}
+      propertyPath: tags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 58805788122495840, guid: 36e917c9e32da3b4a96929fc156a7592,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c489754cdd428164eb293e15fd72f1a8, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 36e917c9e32da3b4a96929fc156a7592, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1840002959
 GameObject:

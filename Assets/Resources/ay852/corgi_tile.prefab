@@ -90,7 +90,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tags: 4
   tileName: Fluffy Corgi
-  health: 1
+  health: 5
   deathEffect: {fileID: 1581785524438676, guid: b55624526117b4928b6338cb05f43f68,
     type: 2}
   deathSFX: {fileID: 8300000, guid: 5ca0ec9a9de18114fa55ef3e4218b3a8, type: 3}

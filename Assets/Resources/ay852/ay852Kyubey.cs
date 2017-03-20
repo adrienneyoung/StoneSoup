@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//an enemy that moves 2 tiles at a time to empty spots
-//also steals your wearables
+//this is a cat-thing that can collect objects and then fire them as projectiles
 public class ay852Kyubey : Tile {
 
     public AudioClip fireSound;
@@ -24,14 +23,7 @@ public class ay852Kyubey : Tile {
         }
 
         AudioManager.playAudio(fireSound);
-        die(); //bone has been consumed
-
-        if (tileUsingUs.hasTag(TileTags.Player))
-        {
-            AudioManager.playAudio(fireSound);
-            tileUsingUs.sprite.color = new Color(1f, 1f, 1f, .05f); //player "disappears"
-
-        }
+        tileUsingUs.sprite.color = new Color(1f, 1f, 1f, .05f); //player "disappears"
     }
 
 }

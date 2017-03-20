@@ -122,9 +122,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fed208b16664c154282c6bd04d11393f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tags: 6
+  tags: 2118
   tileName: Evil in the form of a cat-thing
-  health: 3
+  health: 20
   deathEffect: {fileID: 1028137201516130, guid: c6956d67d496541a48fe508b48f70f4b,
     type: 2}
   deathSFX: {fileID: 8300000, guid: 409fa4ba0ecc74840a0bb7c5c73aa5c0, type: 3}

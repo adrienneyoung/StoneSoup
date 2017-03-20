@@ -3,13 +3,90 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //the corgi will bounce the player away if they didn't give the corgi food
+//will become friendly and follow the player around after the corgi gets food
+//may even take some enemy hits on the player's behalf
 public class ay852Corgi : Tile {
 
     public bool ateFood = false;
     public float bounceForce = 1500f;
     public AudioClip barkSound;
     public AudioClip lickSound;
-    Vector3 point = new Vector3(0, 2, 0);
+
+    //see where the player is so the corgi can move towards them
+    protected float counter;
+    public float time = 0.2f;
+    public float searchRadius = 16f;
+
+    void Start()
+    {
+        counter = Random.Range(0, time);
+    }
+
+    void Update()
+    {
+        //look for food and then move towards it to eat it
+        if(!ateFood)
+        {
+            if (counter > 0)
+            {
+                counter -= Time.deltaTime;
+            }
+
+            if (counter <= 0)
+            {
+                //area to look for food
+                Collider2D[] maybeColliders = Physics2D.OverlapCircleAll(transform.position, searchRadius);
+                foreach (Collider2D maybeCollider in maybeColliders)
+                {
+                    Tile tile = maybeCollider.GetComponent<Tile>();
+                    if (tile != null && tile.hasTag(TileTags.Consumable))
+                    {
+                        Vector2 directionToPlayer = ((Vector2)tile.transform.position - (Vector2)transform.position);
+                        moveViaVelocity(directionToPlayer.normalized, 200f, 60f);
+
+                        if (directionToPlayer.normalized.x >= 0)
+                            sprite.flipX = false;
+                        else
+                            sprite.flipX = true;
+                    }
+                }
+
+                counter = time;
+            }
+        }
+
+        //follow the player around as their companion
+        else if (ateFood)
+        {
+            if (counter > 0)
+            {
+                counter -= Time.deltaTime;
+            }
+
+            if (counter <= 0)
+            {
+                //area to look for the player
+                Collider2D[] maybeColliders = Physics2D.OverlapCircleAll(transform.position, searchRadius);
+                foreach (Collider2D maybeCollider in maybeColliders)
+                {
+                    Tile tile = maybeCollider.GetComponent<Tile>();
+                    if (tile != null && tile.hasTag(TileTags.Player))
+                    {
+                        Vector2 directionToPlayer = ((Vector2)tile.transform.position - (Vector2)transform.position);
+                        moveViaVelocity(directionToPlayer.normalized, 200f, 60f);
+
+                        if (directionToPlayer.normalized.x >= 0)
+                            sprite.flipX = false;
+                        else
+                            sprite.flipX = true;
+                    }
+                }
+
+                counter = time;
+            }
+        }
+        
+    }
 
     void OnCollisionEnter2D (Collision2D collisionInfo) //Collider2D is for OnTriggerEnter2D
     {
@@ -32,9 +109,9 @@ public class ay852Corgi : Tile {
 
                 else if (ateFood)
                 {
-                    //what will happen if the player collides with the fed corgi?
+                    //if the player was invisible, turn the player visible again
                    AudioManager.playAudio(lickSound);
-
+                    otherTile.sprite.color = new Color(1f, 1f, 1f, 1f);
                 }
             }
         }
@@ -50,21 +127,8 @@ public class ay852Corgi : Tile {
             if (otherTile.hasTag(TileTags.Consumable))
             {
                 ateFood = true;
+                addTag(TileTags.Friendly);
             }
         }
-    }
-
-    void Update()
-    {
-        if(ateFood == true)
-        {
-            sprite.color = Color.blue;
-            //transform.RotateAround(point, Vector3.up, 20f * Time.deltaTime);
-        }
-    }
-
-    void FixedUpdate()
-    {
-        _sprite.flipX = true;
     }
 }

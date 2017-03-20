@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//bounces tiles away and also explodes on impact
 public class ay852TennisBall : Tile {
-
-    //if a creature collides with us, bounce it away
 
     public float bounceForce = 2000f;
 
@@ -12,14 +11,11 @@ public class ay852TennisBall : Tile {
     {
         //check if we're colliding with a tile
         Tile otherTile = collisionInfo.gameObject.GetComponent<Tile>();
-        if (otherTile) //if(otherTile != null)
+        if (otherTile) 
         {
-            //check for tags (can't remove or add tags to other objects but can do it to urself) 
-            //if u don't want certain things to bounce
-
-            //normalized usually takes vector3 (?) so make sure the position is vector2 by casting it
             Vector2 dirToBounce = ((Vector2)(otherTile.transform.position - transform.position)).normalized;
             otherTile.addForce(dirToBounce * bounceForce);
+            otherTile.takeDamage(this, 1);
         }
     }
 }

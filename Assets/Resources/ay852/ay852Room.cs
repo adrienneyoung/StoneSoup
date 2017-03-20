@@ -10,10 +10,10 @@ public class ay852Room : Room {
     public GameObject ballPrefab;
     public GameObject spikesPrefab;
 
-    public int minCorgis = 0, maxCorgis = 1;
-    public int minBones = 2, maxBones = 10;
-    public int minKyubey = 1, maxKyubey = 3;
-    public int minBall = 2, maxBall = 5;
+    public int minCorgis = 1, maxCorgis = 1;
+    public int minBones = 2, maxBones = 5;
+    public int minKyubey = 1, maxKyubey = 1;
+    public int minBall = 3, maxBall = 8;
     public int minSpikes = 4, maxSpikes = 4;
 
     public override void generateRoom(LevelGenerator ourGenerator, params Dir[] requiredExits)
@@ -24,7 +24,7 @@ public class ay852Room : Room {
         Tile.spawnTile(corgiPrefab, transform, 1, 3);
         Tile.spawnTile(bonePrefab, transform, 1, 5);
         Tile.spawnTile(kyubeyPrefab, transform, 1, 7);
-        Tile.spawnTile(kyubeyPrefab, transform, 1, 1);
+        Tile.spawnTile(ballPrefab, transform, 1, 1);
         Tile.spawnTile(spikesPrefab, transform, 3, 5);
     }
 }

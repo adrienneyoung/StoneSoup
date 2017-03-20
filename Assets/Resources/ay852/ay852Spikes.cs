@@ -6,5 +6,6 @@ using UnityEngine;
 //they also move back and forth
 public class ay852Spikes : Tile {
 
-
+    protected float counter;
+    public float time = 0.2f;
 }

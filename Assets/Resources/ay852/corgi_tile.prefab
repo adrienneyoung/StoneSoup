@@ -54,8 +54,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
-  m_LinearDrag: 2
+  m_Mass: 2
+  m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -88,9 +88,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc7c08860c3804a469e131daa90c66e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tags: 36
+  tags: 4
   tileName: Fluffy Corgi
-  health: 3
+  health: 1
   deathEffect: {fileID: 1581785524438676, guid: b55624526117b4928b6338cb05f43f68,
     type: 2}
   deathSFX: {fileID: 8300000, guid: 5ca0ec9a9de18114fa55ef3e4218b3a8, type: 3}
@@ -102,6 +102,8 @@ MonoBehaviour:
   bounceForce: 1500
   barkSound: {fileID: 8300000, guid: c858116ca1732fe46b81511fb765ff20, type: 3}
   lickSound: {fileID: 8300000, guid: f99f4da4a313eb147971b5b413c1866d, type: 3}
+  time: 0.2
+  searchRadius: 8
 --- !u!212 &212603867177719454
 SpriteRenderer:
   m_ObjectHideFlags: 1

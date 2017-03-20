@@ -73,7 +73,7 @@ EdgeCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fed208b16664c154282c6bd04d11393f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tags: 2118
+  tags: 36
   tileName: Evil in the form of a cat-thing
   health: 20
   deathEffect: {fileID: 1028137201516130, guid: c6956d67d496541a48fe508b48f70f4b,

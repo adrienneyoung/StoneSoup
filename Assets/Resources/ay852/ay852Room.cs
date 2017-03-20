@@ -11,7 +11,7 @@ public class ay852Room : Room {
     public GameObject spikesPrefab;
 
     public int minCorgis = 1, maxCorgis = 2;
-    public int minBones = 2, maxBones = 5;
+    public int minBones = 1, maxBones = 2;
     public int minKyubeys = 1, maxKyubeys = 2;
     public int minBalls = 2, maxBalls = 5;
     public int minSpikes = 0, maxSpikes = 1;
@@ -37,7 +37,7 @@ public class ay852Room : Room {
         int numCorgis = Random.Range(minCorgis, maxCorgis + 1);
         int numBones = Random.Range(minBones, maxBones + 1);
         int numKyubeys = Random.Range(minKyubeys, maxKyubeys + 1);
-        //int numBalls = Random.Range(minBalls, maxBalls + 1);
+        int numBalls = Random.Range(minBalls, maxBalls + 1);
         int numSpikes = Random.Range(minSpikes, maxSpikes + 1);
 
 
@@ -179,7 +179,7 @@ public class ay852Room : Room {
             }
         }
 
-        /*
+        
         for (int i = 0; i < numBalls; i++)
         {
             possibleSpawnPositions.Clear();
@@ -201,7 +201,7 @@ public class ay852Room : Room {
                 occupiedPositions[(int)spawnPos.x, (int)spawnPos.y] = true;
             }
         }
-        */
+        
         
     }
 

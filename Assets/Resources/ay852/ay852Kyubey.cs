@@ -2,28 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//this is a cat-thing that can collect objects and then fire them as projectiles
-public class ay852Kyubey : Tile {
+//this is a "cute" cat-thing
+//but its actually a trap for friendlies and players
+public class ay852Kyubey : Tile
+{
 
     public AudioClip fireSound;
 
-    //people shouldn't eat dog bones but creatures can without problems 
-    //player will disappear immediately if they eat/use it
-    //they wont lose health though
-    public override void useAsItem(Tile tileUsingUs)
+    void OnCollisionEnter2D(Collision2D collisionInfo) //Collider2D is for OnTriggerEnter2D
     {
-        if (_tileHoldingUs != tileUsingUs)
-        {
-            return;
-        }
+        //check if we're colliding with a tile
+        Tile otherTile = collisionInfo.gameObject.GetComponent<Tile>();
 
-        if (onTransitionArea())
+        if (otherTile)
         {
-            return; // Don't allow us to be thrown while we're on a transition area.
+            if (otherTile.hasTag(TileTags.Player) || otherTile.hasTag(TileTags.Friendly))
+            {
+                otherTile.takeDamage(this, 3);
+                sprite.color = Color.red;
+                AudioManager.playAudio(fireSound);
+            }
         }
-
-        AudioManager.playAudio(fireSound);
-        tileUsingUs.sprite.color = new Color(1f, 1f, 1f, .05f); //player "disappears"
     }
-
 }

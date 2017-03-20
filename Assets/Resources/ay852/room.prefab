@@ -66,12 +66,12 @@ MonoBehaviour:
     type: 2}
   minCorgis: 1
   maxCorgis: 2
-  minBones: 0
-  maxBones: 2
+  minBones: 5
+  maxBones: 10
   minKyubeys: 1
   maxKyubeys: 2
   minBalls: 3
   maxBalls: 8
-  minSpikes: 4
-  maxSpikes: 8
+  minSpikes: 3
+  maxSpikes: 5
   borderWallProbability: 0.7

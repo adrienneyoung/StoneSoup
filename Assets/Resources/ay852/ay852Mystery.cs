@@ -6,30 +6,35 @@ using UnityEngine;
 //player  disappear immediately if they eat/use it
 //they wont lose health though
 public class ay852Mystery : Tile {
+    public float bounceForce = 2000f;
 
-    public AudioClip chewSound;
-    public AudioClip poofSound;
-
-    public override void useAsItem(Tile tileUsingUs)
+    void Start()
     {
-        if (_tileHoldingUs != tileUsingUs)
+        //destroy myself (projectile) if alive past 10 seconds without hitting anything
+        Destroy(gameObject, 2f);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        transform.Translate(5f * Time.deltaTime, 0f, 0f);
+        //transform.position += new Vector3(5f * Time.deltaTime, 0f, 0f));
+    }
+
+    void OnTriggerEnter2D(Collider2D collisionInfo)
+    {
+        //check if we're colliding with a tile
+        Tile otherTile = collisionInfo.gameObject.GetComponent<Tile>();
+
+        if (otherTile)
         {
-            return;
-        }
-
-        if (onTransitionArea())
-        {
-            return; // Don't allow us to be thrown while we're on a transition area.
-        }
-
-        AudioManager.playAudio(chewSound);
-        die(); //bone has been consumed
-
-        if (tileUsingUs.hasTag(TileTags.Player))
-        {
-            AudioManager.playAudio(poofSound);
-            tileUsingUs.sprite.color = new Color(1f, 1f, 1f, .05f); //player "disappears"
-
+            if (!otherTile.hasTag(TileTags.Player))
+            {
+                otherTile.takeDamage(this, 1);
+                Vector2 dirToBounce = ((Vector2)(otherTile.transform.position - transform.position)).normalized;
+                otherTile.addForce(dirToBounce * bounceForce);
+                die(); 
+            }
         }
     }
 

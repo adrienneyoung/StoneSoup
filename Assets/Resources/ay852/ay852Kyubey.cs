@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//this is a "cute" cat-thing
-//but its actually a trap for friendlies and players
+//shoots meat i guess
 public class ay852Kyubey : Tile
 {
 
     public AudioClip fireSound;
 
+    /*
     void OnCollisionEnter2D(Collision2D collisionInfo) //Collider2D is for OnTriggerEnter2D
     {
         //check if we're colliding with a tile
@@ -23,5 +23,30 @@ public class ay852Kyubey : Tile
                 AudioManager.playAudio(fireSound);
             }
         }
+    }*/
+    public Tile ballPrefab;
+
+    public override void useAsItem(Tile tileUsingUs)
+    {
+        if (_tileHoldingUs != tileUsingUs)
+        {
+            return;
+        }
+
+        if (onTransitionArea())
+        {
+            return; // Don't allow us to be thrown while we're on a transition area.
+        }
+        
+
+        if (tileUsingUs.hasTag(TileTags.Player))
+        {
+            AudioManager.playAudio(fireSound);
+            
+                Instantiate(ballPrefab, transform.position + transform.right, Quaternion.Euler(0f, 0f, 0f));
+       
+        }
     }
+
+    
 }

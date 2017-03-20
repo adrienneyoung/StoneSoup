@@ -11,10 +11,10 @@ public class ay852Room : Room {
     public GameObject spikesPrefab;
 
     public int minCorgis = 1, maxCorgis = 2;
-    public int minBones = 1, maxBones = 2;
+    public int minBones = 6, maxBones = 10;
     public int minKyubeys = 1, maxKyubeys = 2;
     public int minBalls = 2, maxBalls = 5;
-    public int minSpikes = 0, maxSpikes = 1;
+    public int minSpikes = 1, maxSpikes = 3;
 
     public float borderWallProbability = 0.7f;
 
@@ -179,7 +179,7 @@ public class ay852Room : Room {
             }
         }
 
-        
+        /*
         for (int i = 0; i < numBalls; i++)
         {
             possibleSpawnPositions.Clear();
@@ -201,7 +201,7 @@ public class ay852Room : Room {
                 occupiedPositions[(int)spawnPos.x, (int)spawnPos.y] = true;
             }
         }
-        
+        */
         
     }
 
